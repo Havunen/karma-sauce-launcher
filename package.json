@@ -1,5 +1,5 @@
 {
-  "name": "havunen-karma-sauce-launcher",
+  "name": "havunen-karma-sauce-launcher2",
   "version": "5.0.0",
   "description": "A Karma plugin. Launch any browser on SauceLabs!",
   "main": "./dist/index.js",
