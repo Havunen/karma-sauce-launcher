@@ -3,7 +3,7 @@ import {SaucelabsReporter} from "./reporter/index.js";
 import {BrowserMap, SaucelabsBrowser} from "./browser-info.js";
 import {SauceConnect} from "./local-tunnel/sauceconnect.js";
 
-module.exports = {
+export default {
   // TODO: make these injectable's classes by using factories.
   'launcher:SauceLabs': ['type', SaucelabsLauncher],
   'reporter:saucelabs': ['type', SaucelabsReporter],

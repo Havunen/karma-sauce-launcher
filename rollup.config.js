@@ -21,7 +21,7 @@ export default [
       },
       {
         file: `${name}.mjs`,
-        format: 'es',
+        format: 'esm',
         sourcemap: true,
       },
     ],
