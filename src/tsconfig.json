@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "Node16",
     "target": "es2015",
     "lib": ["es2015", "DOM"],
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "sourceMap": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "outDir": "../dist",
     "types": []
   },

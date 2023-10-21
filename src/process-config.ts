@@ -1,5 +1,5 @@
 import {bootstrap} from 'global-agent'
-import {isW3C} from "./utils";
+import {isW3C} from "./utils.js";
 
 export function processConfig(config: any = {}, args: any = {}) {
   const username = config.username || process.env.SAUCE_USERNAME;

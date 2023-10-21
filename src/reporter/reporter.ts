@@ -1,4 +1,4 @@
-import {BrowserMap} from "../browser-info";
+import {BrowserMap} from "../browser-info.js";
 import SauceLabsAPI, {Job} from 'saucelabs';
 
 const REGION_MAPPING = {
@@ -77,6 +77,7 @@ export function SaucelabsReporter(logger, browserMap: BrowserMap) {
     }
 
     const {sessionId} = browserData;
+    // @ts-ignore
     const api = new SauceLabsAPI({
       user: browserData.username,
       key: browserData.accessKey,

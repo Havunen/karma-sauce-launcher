@@ -1,8 +1,8 @@
 import { remote, Browser } from "webdriverio";
 import SauceLabsAPI from "saucelabs";
-import { processConfig } from "../process-config";
-import { BrowserMap } from "../browser-info";
-import { waitUntil } from "../utils";
+import { processConfig } from "../process-config.js";
+import { BrowserMap } from "../browser-info.js";
+import { waitUntil } from "../utils.js";
 
 // Array of connected drivers. This is useful for quitting all connected drivers on kill.
 let connectedDrivers: Map<string, Browser> = new Map();
@@ -62,6 +62,7 @@ export function SaucelabsLauncher(
   // and then deleted to make this work.
   const uploadJobResult = async (browserData, browserName) => {
     const { sessionId, username, accessKey, region, results } = browserData;
+    // @ts-ignore
     const api = new SauceLabsAPI({
       user: username,
       key: accessKey,

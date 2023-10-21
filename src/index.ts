@@ -1,7 +1,7 @@
-import {SaucelabsLauncher} from './launcher';
-import {SaucelabsReporter} from "./reporter";
-import {BrowserMap, SaucelabsBrowser} from "./browser-info";
-import {SauceConnect} from "./local-tunnel/sauceconnect";
+import {SaucelabsLauncher} from './launcher/index.js';
+import {SaucelabsReporter} from "./reporter/index.js";
+import {BrowserMap, SaucelabsBrowser} from "./browser-info.js";
+import {SauceConnect} from "./local-tunnel/sauceconnect.js";
 
 module.exports = {
   // TODO: make these injectable's classes by using factories.

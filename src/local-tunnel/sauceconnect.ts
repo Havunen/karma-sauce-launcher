@@ -23,6 +23,7 @@ export function SauceConnect(emitter, logger) {
     }
 
     // Open a new SauceConnect tunnel.
+    // @ts-ignore
     const api = new SaucelabsAPI(seleniumCapabilities)
     return activeInstancePromise = api.startSauceConnect({
         // Redirect all logging output to Karma's logger.
@@ -68,7 +69,7 @@ export function SauceConnect(emitter, logger) {
         log.error(`Could not close Sauce Connect Tunnel. Failure message: ${err.stack}`);
       }
     }
-    
+
     doneFn();
   })
 }

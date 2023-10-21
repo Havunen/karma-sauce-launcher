@@ -2,7 +2,8 @@
   "name": "havunen-karma-sauce-launcher2",
   "version": "5.0.0",
   "description": "A Karma plugin. Launch any browser on SauceLabs!",
-  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "type": "module",
   "scripts": {
     "build": "tsc -p src",
     "run-example": "yarn build && yarn copy-dist-to-modules && yarn run-example-karma",
@@ -38,25 +39,25 @@
   "author": "Vojta Jina <vojta.jina@gmail.com>",
   "dependencies": {
     "global-agent": "^3.0.0",
-    "saucelabs": "^7.3.1",
-    "webdriverio": "^8.16.10"
+    "saucelabs": "^7.4.0",
+    "webdriverio": "^8.20.0"
   },
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "17.7.1",
-    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/cli": "18.0.0",
+    "@commitlint/config-conventional": "18.0.0",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "11.0.0",
-    "@types/fs-extra": "^11.0.2",
-    "@types/global-agent": "^2.1.1",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "^20.6.1",
+    "@types/fs-extra": "^11.0.3",
+    "@types/global-agent": "^2.1.2",
+    "@types/mocha": "^10.0.3",
+    "@types/node": "^20.8.7",
     "husky": "8.0.3",
     "jasmine": "^5.1.0",
     "karma": "^6.4.2",
     "karma-jasmine": "^5.1.0",
-    "semantic-release": "21.1.2",
+    "semantic-release": "22.0.5",
     "typescript": "^5.2.2"
   },
   "contributors": [
