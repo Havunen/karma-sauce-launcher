@@ -1,10 +1,9 @@
 {
   "name": "havunen-karma-sauce-launcher2",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "A Karma plugin. Launch any browser on SauceLabs!",
   "main": "dist/karma-sauce-launcher.js",
   "module": "dist/karma-sauce-launcher.mjs",
-  "type": "module",
   "scripts": {
     "build": "rollup -c",
     "run-example": "yarn build && yarn copy-dist-to-modules && yarn run-example-karma",
