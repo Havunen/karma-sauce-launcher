@@ -10,6 +10,7 @@ export default {
 
   // Provide a service for establishing a SauceConnect tunnel.
   'SauceConnect': ['type', SauceConnect],
+  'sauceConnect': ['type', SauceConnect],
 
   // Provide a map that can be used to determine information about browsers that
   // have been launched with Saucelabs.

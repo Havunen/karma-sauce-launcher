@@ -62,7 +62,6 @@ export function SaucelabsLauncher(
   // and then deleted to make this work.
   const uploadJobResult = async (browserData, browserName) => {
     const { sessionId, username, accessKey, region, results } = browserData;
-    // @ts-ignore
     const api = new SauceLabsAPI({
       user: username,
       key: accessKey,

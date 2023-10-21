@@ -1,5 +1,5 @@
 import {BrowserMap} from "../browser-info.js";
-import SauceLabsAPI, {Job} from 'saucelabs';
+import {Job, default as SaucelabsAPI} from 'saucelabs';
 
 const REGION_MAPPING = {
   'us': '', // default endpoint
@@ -78,7 +78,7 @@ export function SaucelabsReporter(logger, browserMap: BrowserMap) {
 
     const {sessionId} = browserData;
     // @ts-ignore
-    const api = new SauceLabsAPI({
+    const api = new SaucelabsAPI.default({
       user: browserData.username,
       key: browserData.accessKey,
       region: browserData.region,
