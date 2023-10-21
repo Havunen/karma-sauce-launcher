@@ -1,11 +1,12 @@
 {
   "name": "havunen-karma-sauce-launcher2",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "A Karma plugin. Launch any browser on SauceLabs!",
-  "exports": "./dist/index.js",
+  "main": "dist/karma-sauce-launcher.js",
+  "module": "dist/karma-sauce-launcher.mjs",
   "type": "module",
   "scripts": {
-    "build": "tsc -p src",
+    "build": "rollup -c",
     "run-example": "yarn build && yarn copy-dist-to-modules && yarn run-example-karma",
     "copy-dist-to-modules": "rm -rf node_modules/karma-sauce-launcher && mv dist/ node_modules/karma-sauce-launcher",
     "run-example-karma": "yarn karma start examples/karma.conf-ci.js"
@@ -22,7 +23,7 @@
     "tag": "latest"
   },
   "engines": {
-    "node": ">= 10.0.0"
+    "node": ">= 16.0.0"
   },
   "husky": {
     "hooks": {
@@ -57,6 +58,9 @@
     "jasmine": "^5.1.0",
     "karma": "^6.4.2",
     "karma-jasmine": "^5.1.0",
+    "rollup": "^4.1.4",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
     "semantic-release": "22.0.5",
     "typescript": "^5.2.2"
   },

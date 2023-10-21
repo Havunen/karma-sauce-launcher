@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "module": "Node16",
-    "target": "es2015",
+    "module": "ES2022",
+    "target": "esnext",
     "lib": ["es2015", "DOM"],
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "sourceMap": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "../dist",
-    "types": []
+    "outDir": "../dist"
   },
   "files": [
     "index.ts"
