@@ -1,3 +1,7 @@
+## [6.0.0] - 2025-01-22
+* saucelabs updated to v8
+* webdriverio updated to v9
+
 ## [4.3.6](https://github.com/karma-runner/karma-sauce-launcher/compare/v4.3.5...v4.3.6) (2021-04-09)
 
 

@@ -140,10 +140,9 @@ export function SaucelabsLauncher(
       // because otherwise the Saucelabs reporter is not able to report results.
       browserMap.set(this.id, {
         sessionId,
-        username: seleniumCapabilities.user,
-        accessKey: seleniumCapabilities.key,
+        user: seleniumCapabilities.user,
+        key: seleniumCapabilities.key,
         region: seleniumCapabilities.region,
-        headless: seleniumCapabilities.headless,
         results: [],
       });
 

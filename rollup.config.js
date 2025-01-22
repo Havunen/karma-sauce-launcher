@@ -1,8 +1,6 @@
 import dts from 'rollup-plugin-dts'
 import esbuild from 'rollup-plugin-esbuild'
-import pkgJson from "./package.json" assert { type: 'json' };
 
-const name = pkgJson.main.replace(/\.js$/, '')
 
 const bundle = config => ({
   ...config,
@@ -15,12 +13,12 @@ export default [
     plugins: [esbuild()],
     output: [
       {
-        file: `${name}.js`,
+        file: `dist/karma-sauce-launcher.js`,
         format: 'cjs',
         sourcemap: true,
       },
       {
-        file: `${name}.mjs`,
+        file: `dist/karma-sauce-launcher.mjs`,
         format: 'esm',
         sourcemap: true,
       },
@@ -29,7 +27,7 @@ export default [
   bundle({
     plugins: [dts()],
     output: {
-      file: `${name}.d.ts`,
+      file: `dist/karma-sauce-launcher.d.ts`,
       format: 'es',
     },
   }),

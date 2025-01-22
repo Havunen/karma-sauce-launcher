@@ -1,5 +1,5 @@
 import {BrowserMap} from "../browser-info.js";
-import {Job, default as SaucelabsAPI} from 'saucelabs';
+import SauceLabsAPI, { Job } from 'saucelabs';
 
 const REGION_MAPPING = {
   'us': '', // default endpoint
@@ -78,17 +78,16 @@ export function SaucelabsReporter(logger, browserMap: BrowserMap) {
 
     const {sessionId} = browserData;
     // @ts-ignore
-    const api = new SaucelabsAPI.default({
-      user: browserData.username,
-      key: browserData.accessKey,
-      region: browserData.region,
-      headless: browserData.headless
+    const api = new SaucelabsAPI({
+      user: browserData.user,
+      key: browserData.key,
+      region: browserData.region
     });
     const hasPassed = !result.failed && !result.error && !result.disconnected;
 
     // Update the job by reporting the test results. Also we need to store the promise here
     // because in case "onExit" is being called, we want to wait for the API calls to finish.
-    pendingUpdates.push(api.updateJob(browserData.username, sessionId, {
+    pendingUpdates.push(api.updateJob(browserData.user, sessionId, {
       id: sessionId,
       passed: hasPassed,
       'custom-data': result

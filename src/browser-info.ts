@@ -1,7 +1,5 @@
 import {SauceLabsOptions} from 'saucelabs'
 
-type SauceBaseOption = Pick<SauceLabsOptions, 'headless' | 'region'>
-
 interface Results {
   status: string;
   message: string;
@@ -12,15 +10,9 @@ interface Results {
  * This interface describes a browser that has been launched with Saucelabs. This is helpful
  * when reporting the results to the Saucelabs web API.
  */
-export interface SaucelabsBrowser extends SauceBaseOption {
+export interface SaucelabsBrowser extends SauceLabsOptions {
   /** Saucelabs session id of this browser. */
   sessionId: string;
-
-  /** Saucelabs username that has been used to launch this browser. */
-  username: string;
-
-  /** Saucelabs access key that has been used to launch this browser. */
-  accessKey: string;
 
   /** All test results will be stored here **/
   results: Results[];
