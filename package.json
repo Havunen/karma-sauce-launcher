@@ -1,6 +1,6 @@
 {
   "name": "havunen-karma-sauce-launcher2",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "description": "A Karma plugin. Launch any browser on SauceLabs!",
   "main": "dist/karma-sauce-launcher.js",
   "module": "dist/karma-sauce-launcher.mjs",
