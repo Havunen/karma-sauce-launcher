@@ -1,4 +1,4 @@
-import {SauceConnectInstance, default as SauceLabsAPI} from 'saucelabs';
+import {SauceConnectInstance, default as SauceApi} from "saucelabs/build/index.js";
 
 const MAX_SC_START_TRIALS = 3
 
@@ -24,7 +24,7 @@ export function SauceConnect(emitter, logger) {
 
     // Open a new SauceConnect tunnel.
     // @ts-ignore
-    const api = new SauceLabsAPI(seleniumCapabilities)
+    const api = new (SauceApi as any).default(seleniumCapabilities)
     return activeInstancePromise = api.startSauceConnect({
         // Redirect all logging output to Karma's logger.
         logger: log.debug.bind(log),

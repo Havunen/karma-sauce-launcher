@@ -1,5 +1,5 @@
 import { remote, Browser } from "webdriverio";
-import SauceLabsAPI from "saucelabs";
+import {SauceConnectInstance, default as SauceApi} from "saucelabs/build/index.js";
 import { processConfig } from "../process-config.js";
 import { BrowserMap } from "../browser-info.js";
 import { waitUntil } from "../utils.js";
@@ -62,7 +62,9 @@ export function SaucelabsLauncher(
   // and then deleted to make this work.
   const uploadJobResult = async (browserData, browserName) => {
     const { sessionId, username, accessKey, region, results } = browserData;
-    const api = new SauceLabsAPI({
+
+    // @ts-ignore
+    const api = new (SauceApi as any).default({
       user: username,
       key: accessKey,
       region: region,
