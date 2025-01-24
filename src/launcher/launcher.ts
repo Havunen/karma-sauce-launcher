@@ -1,5 +1,5 @@
 import { remote, Browser } from "webdriverio";
-import {SauceConnectInstance, default as SauceApi} from "saucelabs/build/index.js";
+import {default as SauceApi} from "saucelabs/build/index.js";
 import { processConfig } from "../process-config.js";
 import { BrowserMap } from "../browser-info.js";
 import { waitUntil } from "../utils.js";

@@ -1,6 +1,6 @@
 {
   "name": "havunen-karma-sauce-launcher2",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "description": "A Karma plugin. Launch any browser on SauceLabs!",
   "main": "dist/karma-sauce-launcher.js",
   "module": "dist/karma-sauce-launcher.mjs",
@@ -41,7 +41,7 @@
   "dependencies": {
     "global-agent": "^3.0.0",
     "saucelabs": "^8.0.0",
-    "webdriverio": "^9.6.2"
+    "webdriverio": "^9.6.4"
   },
   "license": "MIT",
   "devDependencies": {
@@ -58,7 +58,7 @@
     "jasmine": "^5.5.0",
     "karma": "^6.4.4",
     "karma-jasmine": "^5.1.0",
-    "rollup": "^4.31.0",
+    "rollup": "^4.32.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-esbuild": "^6.1.1",
     "semantic-release": "24.2.1",
